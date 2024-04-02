@@ -1,4 +1,5 @@
-SC config trustedinstaller start=auto
+Set-Service -Name TrustedInstaller -StartupType Demand
+Start-Service -Name TrustedInstaller
 Sfc /ScanNow
 dism /Online /Cleanup-image /RestoreHealth
 dism /Online /Cleanup-image /ScanHealth
